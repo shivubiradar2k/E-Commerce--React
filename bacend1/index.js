@@ -214,9 +214,9 @@ app.post('/login', async (req, res) => {
     
  })
 
- //creating endpoint for popular in women section
+  //creating endpoint for popular in women section
  app.get('/popularinwomen', async (req,res)=>{
-    let products= await Product.find({category:'women'});
+    let products= await Product.find({category:'woman'});
     let popular_in_women=products.slice(0,4);
     console.log('popular women data fetched');
     
